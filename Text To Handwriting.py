@@ -29,10 +29,8 @@ for i in txt.read().replace("\n",""):
         cases = Image.open("myfont/{}.png".format(str(ord(i))))
         BG.paste(cases, (gap, ht))
         size = cases.width
-        height=cases.height
-        #print(size)
-        print("Running...........")
-        gap+=size
+        height = cases.height
+        gap += size
 
         if sheet_width < gap or len(i)*115 >(sheet_width-gap):
             gap,ht=0,ht+140
